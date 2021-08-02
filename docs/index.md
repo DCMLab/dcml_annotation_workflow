@@ -10,7 +10,7 @@ This page introduces a concrete implementation of the annotation workflow paradi
 proposed by Johannes Hentschel, Fabian Moss, Markus Neuwirth, and Martin Rohrmeier
 at the ISMIR conference 2021. It makes use of
 [GitHub Actions](https://github.com/features/actions) and can be easily adopted
-through the corresponding [template repository](https://github.com/DCMLab/annotation_workflow_template/tree/ismir2021).
+through the corresponding [template repository](https://github.com/DCMLab/dcml_annotation_workflow).
 It is an adapted version of the implementation that is at the heart of the
 [DCML Corpus Initiative](https://www.epfl.ch/labs/dcml/projects/corpus-project/)
 and, without further configuration, works out of the box for public repositories
@@ -102,7 +102,7 @@ adapt the GitHub workflow files to their particular use case.
 
 ### Create a GitHub repository
 
-1. Head to the [template repository](https://github.com/DCMLab/annotation_workflow_template/tree/ismir2021)
+1. Head to the [template repository](https://github.com/DCMLab/dcml_annotation_workflow)
    and click on "Use this template".\
    ![Use this template button](img/use_this_template.png)
 1. Create the new repository (if you want it "Private", you need to reconfigure
