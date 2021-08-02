@@ -160,7 +160,7 @@ automatically overwritten.
   * extract a tabular overview of the labels and store it as `harmonies/[file name].tsv`:\
     ![Annotation table](img/annotation_table.png)
   * read out the metadata from the updated MuseScore file which had been modified
-    in MuseScore by the annotator like so:\
+    in MuseScore by the annotator like so (`File => Score Properties`):\
     ![Updating metadata in MuseScore](img/metadata.png)
   * and writes these metadata to `metadata.tsv` and to the overview in the README file:\
     ![Updated README file](img/updated_readme.png)
