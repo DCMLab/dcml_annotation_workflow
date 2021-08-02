@@ -304,7 +304,8 @@ via the action [checkout](https://github.com/actions/checkout).
 * If you want to perform actions on a particular branch, you can use the `ref`
   directive to checkout this branch (for an example, see the next section).
   When checking out a pull request, `ref` receives its HEAD which is stored
-  in the system variable `${{ github.event.pull_request.head.ref }}`.
+  in the system variable {% raw %} `${{ github.event.pull_request.head.ref }}`
+  {% endraw %}.
 
 ### 2. Installing the Python library `ms3`
 
@@ -342,9 +343,11 @@ In order to retrieve the files that were modified during a push or pull-request
 event, we use the pre-defined action
 [get-changed-files](https://github.com/lots0logs/gh-action-get-changed-files):
 
+    {% raw %}
     - uses: lots0logs/gh-action-get-changed-files@2.1.4
       with:
-        token: $\{\{ secrets.GITHUB_TOKEN \}\}
+        token: ${{ secrets.GITHUB_TOKEN }}
+    {% endraw %}
 
 It stores the corresponding file paths in JSON files which can be passed on
 to the code that will perform tasks on them. In an additional step,
@@ -472,19 +475,22 @@ organization admins can create the latter).
 Say you have stored the secret under the name `ACCESS_SECRET`, you need to pass
 it to the `checkout` action so it can clone the private repository:
 
+    {% raw %}
     - name: Clone repo
             uses: actions/checkout@v2
             with:
               path: main
               token: ${{ secrets.ACCESS_SECRET }}
+    {% endraw %}
 
 To enable the bot to push to the private repo, you add a third line to its
 configuration:
 
+    {% raw %}
     git config --global user.name "github-actions[bot]"
     git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
     git config --global user.token ${{ secrets.ACCESS_SECRET }}
-
+    {% endraw %}
 
 ## Deploying automatic workflow updates from a central repository
 
